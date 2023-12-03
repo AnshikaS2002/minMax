@@ -1,5 +1,4 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.*;
 import org.junit.jupiter.api.*;
 
@@ -44,6 +43,27 @@ public class MyTest {
         Findmax findmax = new Findmax();
         Float max = findmax.findmaxFloat(5.4f, 2.1f, 10.5f);
         assertEquals(10.5f, max);
+    }
+
+    @Test
+    public void testMaxStringNumPos1() {
+        Findmax findmax = new Findmax();
+        String max = findmax.findmaxString("Peach", "Apple", "Banana");
+        assertEquals("Peach", max);
+    }
+
+    @Test
+    public void testMaxStringNumPos2() {
+        Findmax findmax = new Findmax();
+        String max = findmax.findmaxString("Apple", "Peach", "Banana");
+        assertEquals("Peach", max);
+    }
+
+    @Test
+    public void testMaxStringNumPos3() {
+        Findmax findmax = new Findmax();
+        String max = findmax.findmaxString("Apple", "Banana", "Peach");
+        assertEquals("Peach", max);
     }
 
 }
