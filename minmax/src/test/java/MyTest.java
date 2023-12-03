@@ -25,4 +25,25 @@ public class MyTest {
         assertEquals(10, max);
     }
 
+    @Test
+    public void testMaxFloatNumPos1() {
+        Findmax findmax = new Findmax();
+        Float max = findmax.findmaxFloat(5.2f, 2.3f, 1.5f);
+        assertEquals(5.2f, max);
+    }
+
+    @Test
+    public void testMaxFloatNumPos2() {
+        Findmax findmax = new Findmax();
+        Float max = findmax.findmaxFloat(5.3f, 15.6f, 1.2f);
+        assertEquals(15.6f, max);
+    }
+
+    @Test
+    public void testMaxFloatNumPos3() {
+        Findmax findmax = new Findmax();
+        Float max = findmax.findmaxFloat(5.4f, 2.1f, 10.5f);
+        assertEquals(10.5f, max);
+    }
+
 }
