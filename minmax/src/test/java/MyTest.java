@@ -59,21 +59,21 @@ public class MyTest {
 
     @Test
     public void testMaxInteger() {
-        Findmax<Integer> maxVal = new Findmax<Integer>(4, 7, 9);
+        Findmax<Integer> maxVal = new Findmax<Integer>(4, 7, 9, 12, 14);
         Integer val = maxVal.findMax();
-        assertEquals(9, val);
+        assertEquals(14, val);
     }
 
     @Test
     public void testMaxFloat() {
-        Findmax<Float> maxVal = new Findmax<Float>(4.7f, 17.5f, 9.5f);
+        Findmax<Float> maxVal = new Findmax<Float>(4.7f, 17.5f, 9.5f, 2.4f, 4.5f);
         Float val = maxVal.findMax();
         assertEquals(17.5f, val);
     }
 
     @Test
     public void testMaxString() {
-        Findmax<String> maxVal = new Findmax<String>("Apple", "Peach", "Banana");
+        Findmax<String> maxVal = new Findmax<String>("Apple", "Peach", "Banana", "Orange");
         String val = maxVal.findMax();
         assertEquals("Peach", val);
     }

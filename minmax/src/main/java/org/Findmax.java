@@ -1,21 +1,22 @@
 package org;
 
+import java.util.Collections;
+import java.util.*;
+
 public class Findmax<T extends Comparable<T>> {
-    private T var1;
-    private T var2;
-    private T var3;
+    private List<T> values;
 
     public Findmax() {
     }
 
-    public Findmax(T var1, T var2, T var3) {
-        this.var1 = var1;
-        this.var2 = var2;
-        this.var3 = var3;
+    public Findmax(T... values) {
+        this.values = Arrays.asList(values);
     }
 
     public T findMax() {
-        return Findmax.findmax(this.var1, this.var2, this.var3);
+        List<T> sortedValues = values;
+        Collections.sort(sortedValues);
+        return sortedValues.getLast();
     }
 
     public static <E extends Comparable<E>> E findmax(E num1, E num2, E num3) {
