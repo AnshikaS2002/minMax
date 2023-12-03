@@ -16,6 +16,7 @@ public class Findmax<T extends Comparable<T>> {
     public T findMax() {
         List<T> sortedValues = values;
         Collections.sort(sortedValues);
+        System.out.println("Max value is " + sortedValues.getLast());
         return sortedValues.getLast();
     }
 
